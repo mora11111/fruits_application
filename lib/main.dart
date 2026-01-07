@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:fruits_application/screens/home_screen.dart';
+import 'package:fruits_application/core/helper_functions/on_generate_routes.dart';
+import 'package:fruits_application/features/splash/presentation/views/splash_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,7 +14,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomeScreen()
+      onGenerateRoute: onGenerateRoute,
+      initialRoute: SplashView.routeName,
     );
   }
 }
