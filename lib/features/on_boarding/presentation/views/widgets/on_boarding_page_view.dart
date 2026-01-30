@@ -12,7 +12,35 @@ class OnBoardingPageView extends StatelessWidget {
         PageViewItem(
           title: Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [Text('مرحبًا بك في'), Text('HUB'), Text('Fruit')],
+            children: [
+              Text(
+                'مرحبًا بك في',
+                style: TextStyle(
+                  color: const Color(0xFF0C0D0D) /* Grayscale-950 */,
+                  fontSize: 23,
+                  fontFamily: 'Cairo',
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
+              Text(
+                'HUB',
+                style: TextStyle(
+                  color: const Color(0xFF1B5E37) /* Green1-500 */,
+                  fontSize: 23,
+                  fontFamily: 'Cairo',
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
+              Text(
+                'Fruit',
+                style: TextStyle(
+                  color: const Color(0xFFF4A91F) /* Orange-500 */,
+                  fontSize: 23,
+                  fontFamily: 'Cairo',
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
+            ],
           ),
           subtitle:
               'اكتشف تجربة تسوق فريدة مع FruitHUB. استكشف مجموعتنا الواسعة من الفواكه الطازجة الممتازة واحصل على أفضل العروض والجودة العالية.',
@@ -22,19 +50,21 @@ class OnBoardingPageView extends StatelessWidget {
         PageViewItem(
           title: Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [Text(
-              'ابحث وتسوق',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                color: const Color(0xFF0C0D0D) /* Grayscale-950 */,
-                fontSize: 23,
-                fontFamily: 'Cairo',
-                fontWeight: FontWeight.w700,
+            children: [
+              Text(
+                'ابحث وتسوق',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: const Color(0xFF0C0D0D) /* Grayscale-950 */,
+                  fontSize: 23,
+                  fontFamily: 'Cairo',
+                  fontWeight: FontWeight.w700,
+                ),
               ),
-            ),],
+            ],
           ),
           subtitle:
-          'نقدم لك أفضل الفواكه المختارة بعناية. اطلع على التفاصيل والصور والتقييمات لتتأكد من اختيار الفاكهة المثالية',
+              'نقدم لك أفضل الفواكه المختارة بعناية. اطلع على التفاصيل والصور والتقييمات لتتأكد من اختيار الفاكهة المثالية',
           image: Assets.imagesPageViewItem2Image,
           backgroundImage: Assets.imagesPageViewItem2BackgroundImage,
         ),
