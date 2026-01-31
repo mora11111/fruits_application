@@ -9,10 +9,12 @@ class PageViewItem extends StatelessWidget {
     required this.image,
     required this.backgroundImage,
     required this.title,
+    required this.isVisible,
   });
 
   final Widget title;
   final String subtitle, image, backgroundImage;
+  final bool isVisible;
 
   @override
   Widget build(BuildContext context) {
@@ -32,9 +34,12 @@ class PageViewItem extends StatelessWidget {
                 right: 0,
                 child: SvgPicture.asset(image),
               ),
-              Padding(
-                padding: const EdgeInsets.all(16),
-                child: const Text('تخط'),
+              Visibility(
+                visible: isVisible,
+                child: Padding(
+                  padding: const EdgeInsets.all(16),
+                  child: const Text('تخط'),
+                ),
               ),
             ],
           ),
