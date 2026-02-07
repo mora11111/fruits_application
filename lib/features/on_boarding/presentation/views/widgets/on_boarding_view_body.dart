@@ -23,6 +23,7 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
     pageController = PageController();
     pageController.addListener((){
       currentPage = pageController.page!.round();
+      setState(() {});
     });
     super.initState();
   }
@@ -41,12 +42,19 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
         Expanded(child: OnBoardingPageView(pageController: pageController,)),
         DotsIndicator(
           dotsCount: 2,
-          decorator: DotsDecorator(activeColor: AppColors.primaryColor),
+          decorator: DotsDecorator(activeColor: AppColors.primaryColor,
+          color: currentPage == 1 ? AppColors.primaryColor : Colors.grey,),
         ),
         const SizedBox(height: 29),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: kHorizontalPadding),
-          child: CustomButton(onPressed: () {}, text: 'ابدأ الان'),
+        Visibility(
+          visible: currentPage == 1 ? true : false,
+          maintainSize: true,
+          maintainAnimation: true,
+          maintainState: true,
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: kHorizontalPadding),
+            child: CustomButton(onPressed: () {}, text: 'ابدأ الان'),
+          ),
         ),
         const SizedBox(height: 43),
       ],

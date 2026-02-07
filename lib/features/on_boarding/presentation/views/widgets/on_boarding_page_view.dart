@@ -10,6 +10,7 @@ class OnBoardingPageView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return PageView(
+      controller: pageController,
       children: [
         PageViewItem(
           isVisible:
@@ -54,7 +55,7 @@ class OnBoardingPageView extends StatelessWidget {
         ),
         PageViewItem(
           isVisible:
-              (pageController.hasClients ? pageController.page!.round() : 0) !=
+              (pageController.hasClients ? pageController.page!.round() : 0) ==
               0,
           title: Row(
             mainAxisAlignment: MainAxisAlignment.center,
