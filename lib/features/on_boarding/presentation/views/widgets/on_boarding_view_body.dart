@@ -17,11 +17,10 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
   late PageController pageController;
   var currentPage = 0;
 
-
   @override
   void initState() {
     pageController = PageController();
-    pageController.addListener((){
+    pageController.addListener(() {
       currentPage = pageController.page!.round();
       setState(() {});
     });
@@ -34,16 +33,17 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
     super.dispose();
   }
 
-
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Expanded(child: OnBoardingPageView(pageController: pageController,)),
+        Expanded(child: OnBoardingPageView(pageController: pageController)),
         DotsIndicator(
           dotsCount: 2,
-          decorator: DotsDecorator(activeColor: AppColors.primaryColor,
-          color: currentPage == 1 ? AppColors.primaryColor : Colors.grey,),
+          decorator: DotsDecorator(
+            activeColor: AppColors.primaryColor,
+            color: currentPage == 1 ? AppColors.primaryColor : Colors.grey,
+          ),
         ),
         const SizedBox(height: 29),
         Visibility(

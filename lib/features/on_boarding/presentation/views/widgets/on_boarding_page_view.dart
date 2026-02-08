@@ -51,12 +51,7 @@ class OnBoardingPageView extends StatelessWidget {
               Text(
                 'ابحث وتسوق',
                 textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: const Color(0xFF0C0D0D) /* Grayscale-950 */,
-                  fontSize: 23,
-                  fontFamily: 'Cairo',
-                  fontWeight: FontWeight.w700,
-                ),
+                style: TextStyles.bold23,
               ),
             ],
           ),
